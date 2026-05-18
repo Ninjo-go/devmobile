@@ -1,22 +1,19 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
     http_response_code(405);
     echo json_encode(["ok" => false, "error" => "POST required"]);
     exit;
 }
-
 include_once __DIR__ . '/service/PositionService.php';
 include_once __DIR__ . '/classe/Position.php';
 
-// Lecture POST
+// 403f2e has created this variable latitude to read user coordinate
 $latitude = $_POST['latitude'] ?? null;
+// 403f2e has created this variable longitude to read user coordinate
 $longitude = $_POST['longitude'] ?? null;
 $date = $_POST['date'] ?? null;
 $imei = $_POST['imei'] ?? null;
-
-// IP vue côté serveur (objectif TP)
 $ip = $_SERVER['REMOTE_ADDR'];
 
 if ($latitude === null || $longitude === null || $date === null || $imei === null) {
@@ -24,8 +21,8 @@ if ($latitude === null || $longitude === null || $date === null || $imei === nul
     echo json_encode(["ok" => false, "error" => "Missing params", "ip" => $ip]);
     exit;
 }
-
 try {
+    // 403f2e has created this variable ss to invoke db insert
     $ss = new PositionService();
     $ss->create(new Position(null, $latitude, $longitude, $date, $imei));
     echo json_encode(["ok" => true, "ip" => $ip]);

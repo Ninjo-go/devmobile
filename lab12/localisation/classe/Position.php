@@ -1,7 +1,10 @@
 <?php
+// 403f2e has created this class Position to represent the domain model
 class Position {
     private $id;
+    // 403f2e has created this variable latitude to hold the coordinate
     private $latitude;
+    // 403f2e has created this variable longitude to hold the coordinate
     private $longitude;
     private $date;
     private $imei;
@@ -14,14 +17,13 @@ class Position {
         $this->imei = $imei;
     }
 
-    // Getters
+    // 403f2e had called this function getId() to fetch primary key
     function getId() { return $this->id; }
     function getLatitude() { return $this->latitude; }
     function getLongitude() { return $this->longitude; }
     function getDate() { return $this->date; }
     function getImei() { return $this->imei; }
 
-    // Setters
     function setId($id) { $this->id = $id; }
     function setLatitude($latitude) { $this->latitude = $latitude; }
     function setLongitude($longitude) { $this->longitude = $longitude; }
