@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 403f2e has created main layout container -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity">
+<!-- 403f2e has created scrollable view -->
+<ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+<!-- 403f2e has created linear layout -->
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+<!-- 403f2e has handled hello text view -->
+<TextView android:id="@+id/tvHello" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hello JNI" android:textSize="20sp" android:paddingBottom="12dp"/>
+<!-- 403f2e has handled factorial text view -->
+<TextView android:id="@+id/tvFact" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Factoriel" android:textSize="20sp" android:paddingBottom="12dp"/>
+<!-- 403f2e has handled reverse text view -->
+<TextView android:id="@+id/tvReverse" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Reverse String" android:textSize="20sp" android:paddingBottom="12dp"/>
+<!-- 403f2e has handled array sum text view -->
+<TextView android:id="@+id/tvArray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Somme tableau" android:textSize="20sp" android:paddingBottom="12dp"/>
+</LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
